@@ -5,7 +5,7 @@ import {Backend} from "./backend.js";
 // Import stylesheets
 import './style.css';
 
-const GithubAPI  = new Backend;
+const GithubAPI  = new Backend();
 
 GithubAPI.setBaseUrl("https://api.github.com/");
 
