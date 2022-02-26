@@ -7,7 +7,7 @@ import './style.css';
 
 const GithubAPI  = new Backend();
 
-GithubAPI.setBaseUrl("https://api.github.com/");
+GithubAPI.setBaseUrl("https://api.github.com");
 
 const form = document.querySelector("#repos-form");
 const username = document.querySelector("#github-username");
@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {
 
     startLoader(button);
     
-    GithubAPI.get(`users/${username.value}/repos`)
+    GithubAPI.get(`/users/${username.value}/repos`)
     .then(data => {
         let html = '';
         data.forEach(repo => {
